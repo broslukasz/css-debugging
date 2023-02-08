@@ -39,21 +39,22 @@ $breakpoints: (
     width: 300px;
     border: 1px solid black;
 
-    //@media (max-width: 750px) {
-    //  width: 400px;
-    //}
+    @media (max-width: 750px) {
+      width: 400px;
+    }
 
     @include above-breakpoint('medium') { // 700px
       width: 600px;
+      //border: 5px solid red;
     }
 
     @include above-breakpoint('large') { // 1025px
       width: 700px;
     }
 
-    //@media (min-width: 800px) and (max-width: 900px) {
-    //  border: 5px solid green;
-    //}
+    @media (min-width: 800px) and (max-width: 900px) {
+      border: 5px solid green;
+    }
 
     button {
       display: none;
@@ -76,9 +77,9 @@ $breakpoints: (
       }
 
 
-      @include above-breakpoint('large') {
-        display: inline-block;
-      }
+      //@include above-breakpoint('large') {
+      //  display: inline-block;
+      //}
     }
   }
 }
